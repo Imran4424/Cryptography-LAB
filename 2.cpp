@@ -53,47 +53,70 @@ string PlainTextToCipther(string text)
 {
     for(int i = 0; i < text.size(); i = i+3)
     {
-        for(int j = i; j < i+3 ; j++)
+    
+        /**
+         * if there is single character left 5
+        */
+        if(i+1 >= text.size())
         {
-            /**
-             * if there is single character left 5
-            */
-            if(j+1 >= text.size())
-            {
-                text[j] = EncryptCharacter(text[j],5);
+            text[i] = EncryptCharacter(text[i],5);
 
-                j = j+3;
-                continue;
-            }
-
+        }
+        else if(i+2 >= text.size())
+        {
             /**
              * if there is two character left 7 11
             */
+            text[i] = EncryptCharacter(text[i], 7);
 
-            if(j+2 >= text.size())
-            {
-                text[j] = EncryptCharacter(text[j], 7);
-
-                text[j+1] = EncryptCharacter(text[j+1], 11);
-
-                j = j+3;
-                continue;
-            }
-
+            text[i+1] = EncryptCharacter(text[i+1], 11);
+        }
+        else if((text[i] <= text[i+1]) && (text[i+1] <= text[i+2]))
+        {
             /**
              * increasing order 2 11 3
             */
+            text[i] = EncryptCharacter(text[i], 2);
 
-            if((text[j] <= text[j+1]) && (text[j+1] <= text[j+2]))
-            {
-                text[j] = EncryptCharacter(text[j], 2);
+            text[i+1] = EncryptCharacter(text[i+1], 11);
+            
+            text[i+2] = EncryptCharacter(text[i+2], 3);
 
-                text[j+1] = EncryptCharacter(text[j+1], 11);
-                
-                text[j+2] = EncryptCharacter(text[j+2], 3);
-            }
+        }
+        else if ((text[i] >= text[i + 1]) && (text[i + 1] >= text[i + 2]))
+        {
+            /**
+             * decreasing order 5 4 6 
+            */
+            text[i] = EncryptCharacter(text[i], 5);
 
-        }// j loop
+            text[i + 1] = EncryptCharacter(text[i + 1], 4);
+
+            text[i + 2] = EncryptCharacter(text[i + 2], 6);
+        }
+        else if ((text[i] > text[i + 1]) && (text[i + 1] < text[i + 2]))
+        {
+            /**
+             * B S B  11 16 5 
+            */
+            text[i] = EncryptCharacter(text[i], 11);
+
+            text[i + 1] = EncryptCharacter(text[i + 1], 16);
+
+            text[i + 2] = EncryptCharacter(text[i + 2], 5);
+        }
+        else if ((text[i] < text[i + 1]) && (text[i + 1] > text[i + 2]))
+        {
+            /**
+             * S B S  18 3 10 
+            */
+            text[i] = EncryptCharacter(text[i], 18);
+
+            text[i + 1] = EncryptCharacter(text[i + 1], 3);
+
+            text[i + 2] = EncryptCharacter(text[i + 2], 10);
+        }
+
     }// i loop
 }
 
