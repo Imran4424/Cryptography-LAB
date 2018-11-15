@@ -15,11 +15,11 @@ string TextToCipher(string text)
 
         int space_position = i;
 
-        cout << previous_position <<" "<< space_position<<endl;
+        //cout << previous_position <<" "<< space_position<<endl;
 
-        for(int j = previous_position; j < space_position; j++)
+        for(int j = space_position - 1; j >= previous_position; j--)
         {
-            for(int k = space_position - 1; k >= previous_position; k--)
+            for(int k = previous_position; k < space_position; k++)
             {
                 char temp = text[j];
                 text[j] = text[k];
