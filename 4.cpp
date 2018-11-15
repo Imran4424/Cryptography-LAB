@@ -5,7 +5,18 @@ using namespace std;
 
 string Reverse(string text)
 {
-    for(int i = 0, int j = text.size() - 1; i > text.size() && j >= 0; i++, j--)
+    int i,j;
+
+    /* 
+    for(int i = 0, int j = 0 ; ; )
+    {
+
+    }
+
+    this is not acceptable in modern c++
+    */
+
+    for(i = 0,j = text.size() - 1; i > text.size() && j >= 0; i++, j--)
     {
         char temp = text[i];
         text[i] = text[j];
