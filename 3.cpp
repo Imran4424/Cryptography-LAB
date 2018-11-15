@@ -11,6 +11,11 @@ string TextToCipher(string text)
         while(text[i] != ' ')
         {
             i++;
+
+            if(i > text.size())
+            {
+                break;
+            }
         }
 
         int space_position = i;
