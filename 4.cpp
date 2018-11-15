@@ -5,11 +5,11 @@ using namespace std;
 
 string Reverse(string text)
 {
-    for(int i = 0, int j = text.size() - 1; i > text.size() - 1 && j >= 0; i++, j--)
+    for(int i = 0, int j = text.size() - 1; i > text.size() && j >= 0; i++, j--)
     {
-        char temp = text[j];
-        text[j] = text[k];
-        text[k] = temp;
+        char temp = text[i];
+        text[i] = text[j];
+        text[j] = temp;
     }
 
     return text;
