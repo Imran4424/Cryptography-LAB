@@ -2,6 +2,19 @@
 #include <string>
 using namespace std;
 
+
+string Reverse(string text)
+{
+    for(int i = 0, int j = text.size() - 1; i > text.size() - 1 && j >= 0; i++, j--)
+    {
+        char temp = text[j];
+        text[j] = text[k];
+        text[k] = temp;
+    }
+
+    return text;
+}
+
 string TextToCipher(string text)
 {
     for (int i = 0; i < text.size(); i++)
@@ -28,11 +41,15 @@ string TextToCipher(string text)
         }
     }
 
+    text = Reverse(text);
+
     return text;
 }
 
 string CipherToText(string encrypt)
 {
+    encrypt = Reverse(encrypt);
+
     for (int i = 0; i < encrypt.size(); i++)
     {
         int previous_position = i;
