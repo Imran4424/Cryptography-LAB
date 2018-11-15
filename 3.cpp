@@ -21,7 +21,7 @@ string TextToCipher(string text)
             {
                 char temp = text[j];
                 text[j] = text[k];
-                tex[k] = temp;
+                text[k] = temp;
             }
         }
 
@@ -39,6 +39,6 @@ main(int argc, char const *argv[])
     string encrypt = TextToCipher(text);
 
     cout<<"Encrypted text: "<< encrypt << endl;
-    
+
     return 0;
 }
