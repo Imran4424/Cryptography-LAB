@@ -10,4 +10,4 @@ Lab Assignments
 3. Consider the plaintext "DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING UNIVERSITY OF RAJSHAHI BANGLADESH", find out the corresponding Transposition Cipher(take width as input). Then perform the reverse operation to get original plaintext.
 
 
-4. 
+4. Find out corresponding double Transposition Cipher of above plaintext. Then perform the reverse operation to get original plaintext.
