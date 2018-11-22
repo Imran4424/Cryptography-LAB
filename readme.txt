@@ -10,4 +10,25 @@ Lab Assignments
 3. Consider the plaintext "DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING UNIVERSITY OF RAJSHAHI BANGLADESH", find out the corresponding Transposition Cipher(take width as input). Then perform the reverse operation to get original plaintext.
 
 
-4. Find out corresponding double Transposition Cipher of above plaintext. Then perform the reverse operation to get original plaintext.
+4. Find out corresponding double Transposition Cipher of the above plaintext. Then perform the reverse operation to get original plaintext.
+
+
+5. You are supplied a file of large non-repeating set of truly random key letter. Your job is to encrypt the plaintext using ONE TIME PAD technique. Then perform the reverse operation to get the original plaintext.
+
+
+6. Use the Lehmann algorithm to check whether the given number P is prime or not?
+
+
+7. Use the Robin-Miller algorithm to check whether the given number P is prime or not?
+
+
+8. Write a program to implement MD5 one way hash function.
+
+
+9. Write a program to implement Secured Hash Algorighm(SHA) one way hash function.
+
+
+10. Encrypt the plaintext message using RSA algorithm. Then perform the reverse operation to get original plaintext.
+
+
+11. Write a program to implement Diffie-Hellman Key Exchange.
