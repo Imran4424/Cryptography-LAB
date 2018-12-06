@@ -10,6 +10,9 @@ using namespace std;
 
 string PlaintextToCipher(string text)
 {
+    ifstream read_key;
+
+    read_key.open("key.txt");
     
 
 
