@@ -156,7 +156,7 @@ int main(int argc, char const *argv[])
 
     getline(cin, text);
 
-    cout<<"......................"<<endl;
+    cout << "......................" <<endl;
 
     cout<<"Plain Text: "<<text<<endl<<endl;
 
