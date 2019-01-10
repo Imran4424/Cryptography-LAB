@@ -9,7 +9,7 @@ ulli my_pow(ulli base, ulli expo, ulli mod)
 {
 	ulli result = base;
 
-	for(ulli i = 1; i <= expo; i++)
+	for(ulli i = 1; i < expo; i++)
 	{
 		result = (result * base) % mod;
 	}
@@ -19,6 +19,8 @@ ulli my_pow(ulli base, ulli expo, ulli mod)
 
 int main(int argc, char const *argv[])
 {
+	bool status = false;
+
 	ulli num;
 	cout << "enter the number which you want to be tasted" << endl;
 	cin >> num;
@@ -42,11 +44,25 @@ int main(int argc, char const *argv[])
 		if ( result % num != 1 && result % num != (num - 1))
 		{
 			cout << num << " is definitely not prime " << endl;
+			
+			status = false;
 
 			break;
 		}
-	
+		else
+		{
+			status = true;
+		}
+			
 	}
+
+	
+	if (status) 
+	{
+		
+		cout << num << " has 50% probability of being prime " << endl;
+	}
+	
 
 
 	return 0;
