@@ -65,6 +65,8 @@ int main(int argc, char const *argv[])
 
 	string dercypt = CipherToText(encrypt, 5);
 
+	dercypt = CipherToText(dercypt, 5);
+
 	cout<< "Decypted text: "<< dercypt <<endl;
 
 	return 0;
