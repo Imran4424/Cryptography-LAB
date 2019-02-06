@@ -60,7 +60,7 @@ string CipherToText(string encrypt)
     return encrypt;
 }
 
-main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
     //string text = "DEPARTMENT OF COMPUTER SCIENCE AND TECHNOLOGY UNIVERSITY OF RAJSHAHI BANGLADESH";
 
