@@ -13,6 +13,7 @@ int main(int argc, char const *argv[])
 	ulli num;
 	cout << "enter the number which you want to be tasted" << endl;
 	cin >> num;
+
 	
 	return 0;
 }
