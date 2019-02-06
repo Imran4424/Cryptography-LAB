@@ -19,6 +19,16 @@ class Lehman
 	{
 		Scanner cin = new Scanner(System.in);
 
-		
+		bool status = false;
+
+		int num;
+
+		System.out.println("enter the number which you want to be tested");
+		num = cin.nextInt();
+
+		int times;
+
+		System.out.println("How many times you want to repeat the test");
+		times = cin.nextInt();
 	}
 }

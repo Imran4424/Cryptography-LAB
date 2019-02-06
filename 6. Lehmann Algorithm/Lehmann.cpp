@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
 
 
 	ulli times;
-	cout << "How many times you want to repeat the number" << endl;
+	cout << "How many times you want to repeat the test" << endl;
 	cin >> times;
 
 
