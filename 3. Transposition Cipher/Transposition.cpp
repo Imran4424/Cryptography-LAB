@@ -40,7 +40,7 @@ string CipherToText(string encrypt, int width)
 
 		if (j >= encrypt.length())
 		{
-			j = ++col;
+			j = ++row;
 		}
 	}
 }
