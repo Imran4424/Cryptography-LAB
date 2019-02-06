@@ -28,7 +28,7 @@ string TextToCipher(string text, int width)
 
 string CipherToText(string encrypt, int width)
 {
-	string dercypt(encrypt.length(), '$');
+	string dercypt(encrypt.length(), '$');  // creating an with encrypt string size and initializing with '$'
 
 	int row = 0;
 	int i,j;
