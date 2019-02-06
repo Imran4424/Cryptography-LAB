@@ -43,6 +43,8 @@ string CipherToText(string encrypt, int width)
 			j = ++row;
 		}
 	}
+
+	return dercypt;
 }
 
 
