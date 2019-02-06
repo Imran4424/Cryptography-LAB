@@ -6,17 +6,43 @@ string TextToCipher(string text, int width)
 {
 	string encrypt;
 
-	int col = 1;
-
+	int col = 0;
 	
+	int i = col;
 
+	while( col < width )
+	{
+		encrypt += text[i];
 
+		i += width
+
+		if (i >= text.length())
+		{
+			i = ++col;
+		}
+	}
+
+	return encrypt;
 }
 
 
-string CipherToText(string encrypt)
+string CipherToText(string encrypt, int width)
 {
+	string dercypt;
 
+	int row = 0;
+
+	for(int i = 0, int j = row; i < encrypt.length(); i++)
+	{
+		dercypt[j] = encrypt[i];
+
+		j += width;
+
+		if (j >= encrypt.length())
+		{
+			j = ++col;
+		}
+	}
 }
 
 
@@ -32,7 +58,7 @@ int main(int argc, char const *argv[])
 
 	cout<<"Encrypted text: "<< encrypt << endl;
 
-	string dercypt = CipherToText(encrypt);
+	string dercypt = CipherToText(encrypt, 5);
 
 	cout<< "Decypted text: "<< dercypt <<endl;
 
