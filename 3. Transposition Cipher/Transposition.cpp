@@ -14,7 +14,7 @@ string TextToCipher(string text, int width)
 	{
 		encrypt += text[i];
 
-		i += width
+		i += width;
 
 		if (i >= text.length())
 		{
@@ -28,11 +28,12 @@ string TextToCipher(string text, int width)
 
 string CipherToText(string encrypt, int width)
 {
-	string dercypt;
+	string dercypt(encrypt.length(), '$');
 
 	int row = 0;
+	int i,j;
 
-	for(int i = 0, int j = row; i < encrypt.length(); i++)
+	for(i = 0, j = row; i < encrypt.length(); i++)
 	{
 		dercypt[j] = encrypt[i];
 
