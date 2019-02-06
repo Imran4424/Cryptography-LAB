@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 class Lehman
 {
@@ -6,7 +7,7 @@ class Lehman
 	{
 		int result = base;
 
-		for(int i = 1; i <= expo; i++)
+		for(int i = 1; i < expo; i++)
 		{
 			result = (result * base) % mod;
 		}
@@ -18,8 +19,9 @@ class Lehman
 	public static void main(String[] args) 
 	{
 		Scanner cin = new Scanner(System.in);
+		Random rand = new Random();
 
-		bool status = true;
+		boolean status = true;
 
 		int num;
 
@@ -34,11 +36,11 @@ class Lehman
 
 		for(int t = 1; t <= times; t++)
 		{
-			int randomNum = rand() % (num-1) + 1; // replace with java random
+			int randomNum = rand.nextInt(num - 1) + 1; 
 
 			int expo = (num - 1) / 2;
 
-			int result = MyPow(randomNum, expo, num);
+			int result = new Lehman().MyPow(randomNum, expo, num);
 
 			if (result % num != 1 && result % num != (num - 1)) 
 			{
@@ -57,7 +59,7 @@ class Lehman
 		if (status) 
 		{
 			
-			System.out.println(num + " has 1 - 1/(2^" + times + " probability of being prime");
+			System.out.println(num + " has 1 - (1/(2^" + times + ")) probability of being prime");
 		}
 
 	}

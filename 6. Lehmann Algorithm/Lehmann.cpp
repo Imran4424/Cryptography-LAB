@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
 	if (status) 
 	{
 		
-		cout << num << " has 1 - 1/(2^" << times << " probability of being prime " << endl;
+		cout << num << " has 1 - 1/(2^" << times << ") probability of being prime " << endl;
 	}
 	
 
