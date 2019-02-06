@@ -5,7 +5,7 @@ using namespace std;
 
 typedef unsigned long long int ulli;
 
-ulli my_pow(ulli base, ulli expo, ulli mod)
+ulli MyPow(ulli base, ulli expo, ulli mod)
 {
 	ulli result = base;
 
@@ -19,7 +19,7 @@ ulli my_pow(ulli base, ulli expo, ulli mod)
 
 int main(int argc, char const *argv[])
 {
-	bool status = false;
+	bool status = true;
 
 	ulli num;
 	cout << "enter the number which you want to be tasted" << endl;
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
 
 		ulli expo = (num-1) / 2 ;
 
-		ulli result = my_pow(randomNum, expo, num);
+		ulli result = MyPow(randomNum, expo, num);
 
 		
 		

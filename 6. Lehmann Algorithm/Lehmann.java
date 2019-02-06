@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Lehman
 {
-	int my_pow(int base, int expo, int mod)
+	int MyPow(int base, int expo, int mod)
 	{
 		int result = base;
 
@@ -19,7 +19,7 @@ class Lehman
 	{
 		Scanner cin = new Scanner(System.in);
 
-		bool status = false;
+		bool status = true;
 
 		int num;
 
@@ -30,5 +30,35 @@ class Lehman
 
 		System.out.println("How many times you want to repeat the test");
 		times = cin.nextInt();
+	
+
+		for(int t = 1; t <= times; t++)
+		{
+			int randomNum = rand() % (num-1) + 1; // replace with java random
+
+			int expo = (num - 1) / 2;
+
+			int result = MyPow(randomNum, expo, num);
+
+			if (result % num != 1 && result % num != (num - 1)) 
+			{
+				System.out.println(num + " is definitely not prime");
+
+				status = false;
+
+				break;
+			}
+			else
+			{
+				status = true;
+			}
+		}
+
+		if (status) 
+		{
+			
+			System.out.println(num + " has 1 - 1/(2^" + times + " probability of being prime");
+		}
+
 	}
 }
