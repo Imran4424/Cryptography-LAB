@@ -66,9 +66,13 @@ int main(int argc, char const *argv[])
 
 	bInitial = MyPowEx(randomA, m, num);
 
-	if (bInitial == 1 || bInitial == -1)
+	if (bInitial == 1)
 	{
-		
+		cout << num << " is not prime" << endl;
+	}
+	else if(bInitial == -1)
+	{
+		cout << num << " is probably prime" << endl;
 	}
 
 
