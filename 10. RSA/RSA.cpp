@@ -72,6 +72,12 @@ string CipherToPlaintext(string encrypt, lli dKey, lli n)
 			k = k * ascii;
 			k = k % n;
 		}
+
+		ascii = k + 96;
+
+		decrypt += (char) ascii;
+
+		i++;
 	}
 }
 
