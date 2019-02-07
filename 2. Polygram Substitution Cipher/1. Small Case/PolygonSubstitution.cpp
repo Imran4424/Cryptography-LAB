@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <fstream>
 using namespace std;
 
 string PlaintextToCipher(string text)
 {
 	map <string, string> encryptDictionary;
 
-	
+	ifstream
 }
 
 
