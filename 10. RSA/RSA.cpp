@@ -20,6 +20,16 @@ int gcd(int a, int b)
     } 
 } 
 
+string PlaintextToCipher(string text, lli eKey)
+{
+	lli i = 0;
+
+	while(i != text.length())
+	{
+		
+	}
+}
+
 
 int main(int argc, char const *argv[])
 {
