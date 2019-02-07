@@ -13,7 +13,7 @@ string PlaintextToCipher(string text)
     ifstream read_key;
     string key;
 
-    read_key.open("key.txt");
+    read_key.open("EncryptKey.txt");
 
     if(read_key.is_open())
     {
@@ -77,6 +77,23 @@ string PlaintextToCipher(string text)
         
     }
 
+    key.erase(0, j - 1);
+
+    ofstream writeFile;
+
+    writeFile.open("EncryptKey.txt");
+
+    if (writeFile.is_open())
+    {
+        writeFile << key;
+
+        writeFile.close();
+    }
+    else
+    {
+        cout << "can not open the file" << endl;
+    }
+
     return text;
 }
 
@@ -86,7 +103,7 @@ string CipherToPlaintext(string encrypt)
     ifstream read_key;
     string key;
 
-    read_key.open("EncryptKey.txt");
+    read_key.open("DecryptKey.txt");
 
     if(read_key.is_open())
     {
@@ -148,7 +165,20 @@ string CipherToPlaintext(string encrypt)
 
     key.erase(0, j - 1);
 
-    
+    ofstream writeFile;
+
+    writeFile.open("DecryptKey.txt");
+
+    if (writeFile.is_open())
+    {
+        writeFile << key;
+
+        writeFile.close();
+    }
+    else
+    {
+        cout << "can not open the file" << endl;
+    }
 
     return encrypt;
 }
