@@ -66,6 +66,11 @@ int main(int argc, char const *argv[])
 
 	bInitial = MyPowEx(randomA, m, num);
 
+	if (bInitial == 1 || bInitial == -1)
+	{
+		
+	}
+
 
 	return 0;
 }
