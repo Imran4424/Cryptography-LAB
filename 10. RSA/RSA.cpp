@@ -20,9 +20,14 @@ int gcd(int a, int b)
     } 
 } 
 
+
+lli temp[200];
+
 string PlaintextToCipher(string text, lli eKey)
 {
 	lli i = 0;
+
+	string encrypt;
 
 	while(i != text.length())
 	{
@@ -37,6 +42,13 @@ string PlaintextToCipher(string text, lli eKey)
 			k = k * pt;
 			k = k % n;
 		} 
+
+		temp[i] = k;
+
+		ascii = k + 96;
+
+		encrypt += (char) ascii;
+
 	}
 }
 
