@@ -23,7 +23,7 @@ int gcd(int a, int b)
 
 lli temp[200];
 
-string PlaintextToCipher(string text, lli eKey)
+string PlaintextToCipher(string text, lli eKey, lli n)
 {
 	lli i = 0;
 
@@ -35,11 +35,11 @@ string PlaintextToCipher(string text, lli eKey)
 
 		ascii = ascii - 96;
 
-		k = 1;
+		lli k = 1;
 
 		for(lli j = 0; j < eKey; j++)
 		{
-			k = k * pt;
+			k = k * ascii;
 			k = k % n;
 		} 
 
@@ -55,7 +55,7 @@ string PlaintextToCipher(string text, lli eKey)
 	return encrypt;
 }
 
-string CipherToPlaintext(string encrypt, lli dKey)
+string CipherToPlaintext(string encrypt, lli dKey, lli n)
 {
 	lli i = 0;
 
@@ -63,7 +63,15 @@ string CipherToPlaintext(string encrypt, lli dKey)
 
 	while(i != encrypt.length())
 	{
-		
+		lli ascii = temp[i];
+
+		lli k = 1;
+
+		for(int j = 0; j < dKey; j++)
+		{
+			k = k * ascii;
+			k = k % n;
+		}
 	}
 }
 
@@ -103,11 +111,11 @@ int main(int argc, char const *argv[])
 
 	cout << "Plain Text: "<< text << endl << endl;
 
-	string encrypt = PlaintextToCipher(text, eKey);
+	string encrypt = PlaintextToCipher(text, eKey, n);
 
 	cout <<"Cipher: " << encrypt << endl << endl;
 
-	string decrypt = CipherToPlaintext(encrypt, dKey);
+	string decrypt = CipherToPlaintext(encrypt, dKey, n);
 
 	cout << "Plain Text: "<< decrypt << endl;
 
