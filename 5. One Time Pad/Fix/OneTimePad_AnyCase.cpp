@@ -19,10 +19,12 @@ string PlaintextToCipher(string text)
     {
         string line;
 
-        while(read_key)
-        {
-            getline(read_key, line);
-        }
+        // while(read_key)
+        // {
+        //     getline(read_key, line);
+        // }
+
+        getline(read_key, line);
 
         key = line;
 
@@ -109,10 +111,12 @@ string CipherToPlaintext(string encrypt)
     {
         string line;
 
-        while(read_key)
-        {
-            getline(read_key, line);
-        }
+        // while(read_key)
+        // {
+        //     getline(read_key, line);
+        // }
+
+        getline(read_key, line);
 
         key = line;
 

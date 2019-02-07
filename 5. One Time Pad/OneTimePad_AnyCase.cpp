@@ -95,6 +95,11 @@ string CipherToPlaintext(string encrypt)
 
         getline(read_key, line);
 
+        // while(read_key)
+        // {
+        //     getline(read_key, line);
+        // }
+
         key = line;
 
         read_key.close();
