@@ -66,25 +66,36 @@ int main(int argc, char const *argv[])
 	ulli randomA = rand() % (num-1) + 1;
 
 
-	ulli bIterative = MyPowEx(randomA, m, num);
+	ulli bInitial = MyPowEx(randomA, m, num);
 
-	while(bIterative != 1 && bIterative != -1)
-	{
-		ulli result = MyPowEx(bIterative, m, num);
-
-		bIterative = result;
-
-		cout << "I am here 3" << endl;
-	}
-
-	if (bIterative == 1)
-	{
-		cout << num << " is not prime" << endl;
-	}
-	else if(bIterative == -1)
+	if(bInitial == 1 || bInitial == -1)
 	{
 		cout << num << " is probably prime" << endl;
 	}
+	else
+	{
+		ulli bIterative = bInitial;
+
+		while(bIterative != 1 && bIterative != -1)
+		{
+			ulli result = MyPowEx(bIterative, m, num);
+
+			bIterative = result;
+
+			cout << "I am here 3" << endl;
+		}
+
+		if (bIterative == 1)
+		{
+			cout << num << " is not prime" << endl;
+		}
+		else if(bIterative == -1)
+		{
+			cout << num << " is probably prime" << endl;
+		}
+	}
+
+	
 
 	return 0;
 }
