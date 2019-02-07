@@ -1,6 +1,15 @@
 #include <iostream>
 #include <string>
+#include <map>
 using namespace std;
+
+string PlaintextToCipher(string text)
+{
+	map <string, string> encryptDictionary;
+
+	
+}
+
 
 int main(int argc, char const *argv[])
 {
