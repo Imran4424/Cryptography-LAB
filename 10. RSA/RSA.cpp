@@ -37,7 +37,7 @@ string PlaintextToCipher(string text, lli eKey)
 
 		k = 1;
 
-		for(int j = 0; j < eKey; j++)
+		for(lli j = 0; j < eKey; j++)
 		{
 			k = k * pt;
 			k = k % n;
@@ -49,6 +49,21 @@ string PlaintextToCipher(string text, lli eKey)
 
 		encrypt += (char) ascii;
 
+		i++;
+	}
+
+	return encrypt;
+}
+
+string CipherToPlaintext(string encrypt, lli dKey)
+{
+	lli i = 0;
+
+	string decrypt;
+
+	while(i != encrypt.length())
+	{
+		
 	}
 }
 
