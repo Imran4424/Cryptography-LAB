@@ -64,7 +64,7 @@ int main(int argc, char const *argv[])
 	ulli randomA = rand() (num-1) + 1;
 
 
-	 = MyPowEx(randomA, m, num);
+	bInitial = MyPowEx(randomA, m, num);
 
 
 	return 0;
