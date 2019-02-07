@@ -9,7 +9,7 @@
 using namespace std;
 
 string PlaintextToCipher(string text)
-{
+{ 
     ifstream read_key;
     string key;
 
@@ -19,23 +19,24 @@ string PlaintextToCipher(string text)
     {
         string line;
 
-        while(read_key)
-        {
-            getline(read_key, line);
-        }
-
+        getline(read_key, line);
+   
         key = line;
 
         read_key.close();
     }
-
+   
     int i,j;
+
 
     for(i = 0, j=0; i < text.size() && j < key.size(); i++, j++)
     {
+
+       
         
         if ((text [i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z')) 
         {
+
 
             if (text [i] >= 'A' && text[i] <= 'Z') 
             {
@@ -92,10 +93,7 @@ string CipherToPlaintext(string encrypt)
     {
         string line;
 
-        while(read_key)
-        {
-            getline(read_key, line);
-        }
+        getline(read_key, line);
 
         key = line;
 

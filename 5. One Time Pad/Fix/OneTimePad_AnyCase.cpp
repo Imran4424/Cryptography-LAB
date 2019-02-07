@@ -188,19 +188,20 @@ int main(int argc, char const *argv[])
 {
     string text;
 
+    cout << "Input your message" << endl;
     getline(cin, text);
 
     cout << "......................" <<endl;
 
-    cout<<"Plain Text: "<<text<<endl<<endl;
+    cout<<"Plain Text: "<< text << endl << endl;
 
     string encrypt = PlaintextToCipher(text);
 
-    cout<<"Cipher: "<<encrypt<<endl<<endl;
+    cout<<"Cipher: "<< encrypt << endl << endl;
 
     string decrypt = CipherToPlaintext(encrypt);
 
-    cout<<"Plain Text: "<<decrypt<<endl;
+    cout<<"Plain Text: "<< decrypt <<endl;
 
     return 0;
 }
