@@ -79,6 +79,8 @@ string CipherToPlaintext(string encrypt, lli dKey, lli n)
 
 		i++;
 	}
+
+	return decrypt;
 }
 
 
