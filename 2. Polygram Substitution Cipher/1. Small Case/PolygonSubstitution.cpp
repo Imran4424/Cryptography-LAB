@@ -8,7 +8,20 @@ string PlaintextToCipher(string text)
 {
 	map <string, string> encryptDictionary;
 
-	ifstream
+	ifstream readFile;
+
+	readFile.open("dictionary.txt");
+
+	if (readFile.is_open())
+	{
+		
+
+		readFile.close();
+	}
+	else
+	{
+		cout << "can not open the file" << endl;
+	}
 }
 
 
