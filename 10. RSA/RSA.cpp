@@ -26,7 +26,17 @@ string PlaintextToCipher(string text, lli eKey)
 
 	while(i != text.length())
 	{
-		
+		lli ascii = (int)text[i];
+
+		ascii = ascii - 96;
+
+		k = 1;
+
+		for(int j = 0; j < eKey; j++)
+		{
+			k = k * pt;
+			k = k % n;
+		} 
 	}
 }
 
