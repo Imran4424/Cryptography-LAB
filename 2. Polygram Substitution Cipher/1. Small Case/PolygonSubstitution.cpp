@@ -27,6 +27,10 @@ string PlaintextToCipher(string text)
 	{
 		cout << "can not open the file" << endl;
 	}
+
+	string block;
+
+	for()
 }
 
 
