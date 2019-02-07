@@ -29,8 +29,17 @@ string PlaintextToCipher(string text)
 	}
 
 	string block;
+	int startPos = 0;
 
-	for()
+	for(int i = 0; i < text.length(); i++)
+	{
+		block += text[i];
+
+		if(block.length() == 3)
+		{
+			
+		}
+	}
 }
 
 
