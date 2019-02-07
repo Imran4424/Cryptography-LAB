@@ -7,12 +7,14 @@ typedef unsigned long long int ulli;
 
 ulli MyPow(ulli base, ulli pow)
 {
-	result = 1;
+	ulli result = 1;
 
 	for (int i = 1; i <= pow; ++i)
 	{
 		result *= base;
 	}
+
+	cout << "I am here" << endl;
 
 	return result;
 }
@@ -32,8 +34,6 @@ ulli MyPowEx(ulli base, ulli expo, ulli mod)
 
 int main(int argc, char const *argv[])
 {
-	bool status = true;
-
 	ulli num;
 	cout << "enter the number which you want to be tasted" << endl;
 	cin >> num;
@@ -50,6 +50,8 @@ int main(int argc, char const *argv[])
 		b++;
 
 		dividor = MyPow(2,b);
+
+		cout << "I am here 2" << endl;
 	}
 
 	b--;
@@ -61,20 +63,28 @@ int main(int argc, char const *argv[])
 
 	// chosing a 
 
-	ulli randomA = rand() (num-1) + 1;
+	ulli randomA = rand() % (num-1) + 1;
 
 
-	bInitial = MyPowEx(randomA, m, num);
+	ulli bIterative = MyPowEx(randomA, m, num);
 
-	if (bInitial == 1)
+	while(bIterative != 1 && bIterative != -1)
+	{
+		ulli result = MyPowEx(bIterative, m, num);
+
+		bIterative = result;
+
+		cout << "I am here 3" << endl;
+	}
+
+	if (bIterative == 1)
 	{
 		cout << num << " is not prime" << endl;
 	}
-	else if(bInitial == -1)
+	else if(bIterative == -1)
 	{
 		cout << num << " is probably prime" << endl;
 	}
-
 
 	return 0;
 }
