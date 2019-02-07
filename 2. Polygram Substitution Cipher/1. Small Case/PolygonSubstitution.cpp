@@ -10,11 +10,16 @@ string PlaintextToCipher(string text)
 
 	ifstream readFile;
 
+	string msg, cipher;
+
 	readFile.open("dictionary.txt");
 
 	if (readFile.is_open())
 	{
-		
+		while(readFile >> msg >> cipher)
+		{
+			encryptDictionary[msg] = cipher;
+		}
 
 		readFile.close();
 	}
