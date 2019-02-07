@@ -50,5 +50,19 @@ int main(int argc, char const *argv[])
 	int k = 2;
 	lli dKey = (1 + (k*phiN)) / eKey;
 
+	string text = "Encrypt the plaintext message using RSA algorithm. Then perform the reverse operation to get original plaintext.";
+
+	cout << "......................" <<endl;
+
+	cout << "Plain Text: "<< text << endl << endl;
+
+	string encrypt = PlaintextToCipher(text, eKey);
+
+	cout <<"Cipher: " << encrypt << endl << endl;
+
+	string decrypt = CipherToPlaintext(encrypt, dKey);
+
+	cout << "Plain Text: "<< decrypt << endl;
+
 	return 0;
 }
